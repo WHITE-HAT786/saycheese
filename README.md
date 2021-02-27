@@ -17,7 +17,7 @@
 
 <p align="center">
 
-<img title="Saycheese" src="https://user-images.githubusercontent.com/49580304/96668015-0c7eb600-130f-11eb-9193-e02e6b209b01.jpg"></a>
+<img title="Saycheese"<img src="https://i.ibb.co/qYcKm14/White.jpg" alt="White" border="0"></a>
 
 </p>
 
