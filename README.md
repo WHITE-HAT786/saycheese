@@ -17,7 +17,7 @@
 
 <p align="center">
 
-<img title="Saycheese"<img src="https://i.ibb.co/qYcKm14/White.jpg" alt="White" border="0"></a>
+<img title="Saycheese"><img src="https://i.ibb.co/qYcKm14/White.jpg" alt="White" border="0"></a>
 
 </p>
 
