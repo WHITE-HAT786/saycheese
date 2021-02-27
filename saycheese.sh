@@ -19,7 +19,7 @@ printf " \e[1;77m v1.0 coded by github.com/thelinuxchoice/saycheese\e[0m \n"
 
 printf "\n"
 
-
+echo " N073:> PLEASE TURN ON YOUR HOTSPOT OR ELSE YOU DONT GET LINK....!"
 }
 
 stop() {
