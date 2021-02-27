@@ -91,7 +91,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `pip install lolcat`
 
-* `git clone https://github.com/noob-hackers/grabcam`
+* `git clone https://github.com/WHITE-HAT786/saycheese.git`
 
 * `cd $HOME`
 
@@ -151,17 +151,6 @@ __SELECT OPTION__ :
 
 </p>
 
-## WATCH VIDEO [Termux]
-
-[![des](https://user-images.githubusercontent.com/49580304/96466915-3c2ea080-11df-11eb-8328-100ca165c12c.jpg)](https://rebrand.ly/rcentvideo)
-
-## CONNECT WITH US :
-
-
-
-## BUY ME A COFFEE :
-
-<p align="center">
 
 <a href="https://rebrand.ly/BuyCoffee"><img title="Noob Hackers" src="https://camo.githubusercontent.com/ae8af018f80649f3d379eb23dbf59acceaffa24e/68747470733a2f2f6c69626572617061792e636f6d2f6173736574732f776964676574732f646f6e6174652e737667"></a>
 
