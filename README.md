@@ -139,7 +139,7 @@ __SELECT OPTION__ :
 
 <br>
 <p align="center">
-<img width="50%" src="https://user-images.githubusercontent.com/49580304/96668024-14d6f100-130f-11eb-9b77-321909b67a8f.jpg"/>
+<img width="50%" <img src="https://i.ibb.co/W2BJXrS/20210227-232109.png" alt="20210227-232109" border="0">
 
 </p>
 
