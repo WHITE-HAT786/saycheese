@@ -97,11 +97,12 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `ls`
 
-* `cd grabcam`
+* `cd saycheese`
+
 
 * `ls`
 
-* `bash grabcam.sh`
+* `bash saycheese.sh`
 
 ```
 
