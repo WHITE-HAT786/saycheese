@@ -80,12 +80,16 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `cd $HOME`
 
+
+
 * `ls`
 
 * `cd saycheese`
 
 
 * `ls`
+
+* `chmod 777 ngrok`
 
 * `bash saycheese.sh`
 
