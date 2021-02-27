@@ -139,22 +139,8 @@ __SELECT OPTION__ :
 
 - From this option you can select type of portforwarding
 
-## SCREEN SHOTS [Termux]
-
-<br>
-
-<p align="center">
-
-<img width="50%" src="https://user-images.githubusercontent.com/49580304/96668024-14d6f100-130f-11eb-9b77-321909b67a8f.jpg"/>
-
-<img width="45%" src="https://user-images.githubusercontent.com/49580304/96668019-13a5c400-130f-11eb-9b30-c96a055b7532.jpg"/>
-
-</p>
 
 
-<a href="https://rebrand.ly/BuyCoffee"><img title="Noob Hackers" src="https://camo.githubusercontent.com/ae8af018f80649f3d379eb23dbf59acceaffa24e/68747470733a2f2f6c69626572617061792e636f6d2f6173736574732f776964676574732f646f6e6174652e737667"></a>
-
-</p>
 
 ## WARNING : 
 
