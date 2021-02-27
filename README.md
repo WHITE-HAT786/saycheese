@@ -85,7 +85,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 * `ls`
 
 * `cd saycheese`
-* ./ngrok autotoken
+* `./ngrok autotoken`
 
 
 
