@@ -17,7 +17,7 @@
 
 <p align="center">
 
-<a href="https://bit.ly/2BNk3P1"><img title="Saycheese" src="https://user-images.githubusercontent.com/49580304/96668015-0c7eb600-130f-11eb-9193-e02e6b209b01.jpg"></a>
+<img title="Saycheese" src="https://user-images.githubusercontent.com/49580304/96668015-0c7eb600-130f-11eb-9193-e02e6b209b01.jpg"></a>
 
 </p>
 
