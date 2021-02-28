@@ -135,7 +135,10 @@ __SELECT OPTION__ :
 
 </p>
 
+## CONNECT WITH US :
 
+
+[![Instagram](https://img.shields.io/badge/INSTAGRAM-FOLLOW-red?style=for-the-badge&logo=instagram)](https://instagram.com/white_hat_278?igshid=175v9uifresgr)
 
 ## WARNING : 
 
