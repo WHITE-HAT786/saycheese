@@ -87,7 +87,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 * `chmod 777 ngrok`
 
 * `./ngrok autotoken`
- 
+ YOU CAN CREATE YOUR NGROK ACCOUNT FROM HERE - www.ngrok.com 
 
 * `bash saycheese.sh`
 
