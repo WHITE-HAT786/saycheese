@@ -84,7 +84,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `ls`
 
-* `chmod 777 ngrok`
+* `chmod +x *`
 
 * `./ngrok autotoken`
  YOU CAN CREATE YOUR NGROK ACCOUNT FROM HERE - www.ngrok.com 
