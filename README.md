@@ -76,7 +76,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `pip install requests`
 
-
+* `pkg install php -y`
 
 * `pip install lolcat`
 
