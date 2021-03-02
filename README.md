@@ -41,15 +41,11 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * internet
 
-* php
-
-
-
-* ngrok
+* ngrok auto token
 
 ## FEATURES :
 
-* [+] Real camera hacking !
+* [+] Pubg Phising Page !
 
 * [+] Updated maintainence !
 
