@@ -65,11 +65,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `pkg install git -y`
 
-* `pkg install php -y`
-
 * `pip install requests`
-
-* `pip install lolcat`
 
 * `git clone https://github.com/WHITE-HAT786/saycheese.git`
 
