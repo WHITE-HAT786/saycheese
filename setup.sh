@@ -14,9 +14,11 @@ ver=$(cloudflared --version | awk '{print $2}')
 if [[ $ver != 'version' ]]; then
     rm -rf $PREFIX/bin/cloudflared >/dev/null 2>&1
 fi
+clear
 if ! hash cloudflared >/dev/null 2>&1; then
     source <(curl -fsSL "https://git.io/JinSa")
 fi
+clear
 cat <<- VAR > $PREFIX/bin/cloudflare
 #!/bin/bash
 arg1="\$1"
@@ -30,5 +32,6 @@ printf "\n\nConfiguration completed just run 'clouflare --help' for help\n\n"
 cd
 rm -rf cloudflare-ui
 cd saycheese
-
+clear 
+printf "\n\nConfiguration Now add you ngrok auth token then start the tool \n\n"
 
