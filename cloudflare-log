@@ -1,0 +1,65 @@
+{"level":"info","time":"2022-10-24T16:29:25Z","message":"Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps"}
+{"level":"info","time":"2022-10-24T16:29:25Z","message":"Requesting new quick Tunnel on trycloudflare.com..."}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"+--------------------------------------------------------------------------------------------+"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"|  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"|  https://jewelry-freight-casual-last.trycloudflare.com                                     |"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"+--------------------------------------------------------------------------------------------+"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"Version 2022.10.2"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"GOOS: linux, GOVersion: go1.18.6, GoArch: arm64"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"Settings: map[logfile:/data/data/com.termux/files/home/saycheese/cloudflare-log protocol:quic url:127.0.0.1:3333]"}
+{"level":"info","autoupdateFreq":86400000,"time":"2022-10-24T16:29:28Z","message":"Autoupdate frequency is set"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"Generated Connector ID: 100c3f6e-2aaa-4290-829a-d4a73cf44d81"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"Initial protocol quic"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"ICMP proxy will use 192.168.100.4 as source for IPv4"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"ICMP proxy will use fe80::70c8:71ff:febc:2668 in zone wlan0 as source for IPv6"}
+{"level":"warn","error":"open /proc/sys/net/ipv4/ping_group_range: permission denied","time":"2022-10-24T16:29:28Z","message":"The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network"}
+{"level":"info","time":"2022-10-24T16:29:28Z","message":"Starting metrics server on 127.0.0.1:33553/metrics"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:28Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:28Z","message":"Register tunnel error from server side"}
+{"level":"info","ip":"198.41.200.193","connIndex":0,"time":"2022-10-24T16:29:29Z","message":"Retrying connection in up to 2s"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:30Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:30Z","message":"Register tunnel error from server side"}
+{"level":"info","ip":"198.41.200.193","connIndex":0,"time":"2022-10-24T16:29:30Z","message":"Retrying connection in up to 4s"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:34Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:34Z","message":"Register tunnel error from server side"}
+{"level":"info","ip":"198.41.200.193","connIndex":0,"time":"2022-10-24T16:29:34Z","message":"Retrying connection in up to 8s"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:41Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Unauthorized: Failed to get tunnel","time":"2022-10-24T16:29:41Z","message":"Register tunnel error from server side"}
+{"level":"info","ip":"198.41.200.193","connIndex":0,"time":"2022-10-24T16:29:41Z","message":"Retrying connection in up to 16s"}
+{"level":"info","connIndex":0,"location":"DEL","ip":"198.41.200.193","time":"2022-10-24T16:29:49Z","message":"Connection d14ab727-f2f1-4b16-baa0-71555857d728 registered"}
+{"level":"info","connIndex":2,"location":"DEL","ip":"198.41.200.23","time":"2022-10-24T16:29:51Z","message":"Connection 4dcae1b2-1927-45c9-9a33-04c921ee1e4c registered"}
+{"level":"info","connIndex":1,"location":"BOM","ip":"198.41.192.167","time":"2022-10-24T16:29:51Z","message":"Connection 61682533-7773-4357-a3fc-2dfc00caf03a registered"}
+{"level":"warn","ip":"198.41.192.7","connIndex":3,"error":"already connected to this server, trying another address","time":"2022-10-24T16:29:51Z","message":"Failed to serve quic connection"}
+{"level":"warn","ip":"198.41.192.7","connIndex":3,"error":"already connected to this server, trying another address","time":"2022-10-24T16:29:51Z","message":"Unable to establish connection."}
+{"level":"warn","error":"already connected to this server, trying another address","connIndex":3,"time":"2022-10-24T16:29:52Z","message":"Connection terminated"}
+{"level":"info","connIndex":3,"location":"BOM","ip":"198.41.192.47","time":"2022-10-24T16:30:02Z","message":"Connection e4e2ce34-4ca3-4b0a-a514-e2bf109bccba registered"}
+{"level":"error","error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","cfRay":"75f418fe04caf2ff-BOM","originService":"http://127.0.0.1:3333","time":"2022-10-24T16:30:32Z"}
+{"level":"error","ip":"198.41.192.47","connIndex":3,"error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","type":"http","dest":"https://jewelry-freight-casual-last.trycloudflare.com/","time":"2022-10-24T16:30:32Z","message":"Request failed"}
+{"level":"error","error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","cfRay":"75f418ff256ff2ff-BOM","originService":"http://127.0.0.1:3333","time":"2022-10-24T16:30:32Z"}
+{"level":"error","ip":"198.41.192.167","connIndex":1,"error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","type":"http","dest":"https://jewelry-freight-casual-last.trycloudflare.com/favicon.ico","time":"2022-10-24T16:30:32Z","message":"Request failed"}
+{"level":"error","error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","cfRay":"75f4195fb67df2ff-BOM","originService":"http://127.0.0.1:3333","time":"2022-10-24T16:30:48Z"}
+{"level":"error","ip":"198.41.192.47","connIndex":3,"error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","type":"http","dest":"https://jewelry-freight-casual-last.trycloudflare.com/","time":"2022-10-24T16:30:48Z","message":"Request failed"}
+{"level":"error","error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","cfRay":"75f41960a71df2ff-BOM","originService":"http://127.0.0.1:3333","time":"2022-10-24T16:30:48Z"}
+{"level":"error","ip":"198.41.192.47","connIndex":3,"error":"Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:3333: connect: connection refused","type":"http","dest":"https://jewelry-freight-casual-last.trycloudflare.com/favicon.ico","time":"2022-10-24T16:30:48Z","message":"Request failed"}
+{"level":"info","time":"2022-10-24T16:30:54Z","message":"Initiating graceful shutdown due to signal interrupt ..."}
+{"level":"info","connIndex":3,"time":"2022-10-24T16:30:55Z","message":"Unregistered tunnel connection"}
+{"level":"error","ip":"198.41.192.47","connIndex":3,"error":"Application error 0x0","time":"2022-10-24T16:30:55Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.192.47","connIndex":3,"error":"Application error 0x0","time":"2022-10-24T16:30:55Z","message":"Serve tunnel error"}
+{"level":"info","ip":"198.41.192.47","connIndex":3,"time":"2022-10-24T16:30:55Z","message":"Retrying connection in up to 1s"}
+{"level":"info","connIndex":0,"time":"2022-10-24T16:30:55Z","message":"Unregistered tunnel connection"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Application error 0x0","time":"2022-10-24T16:30:55Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.200.193","connIndex":0,"error":"Application error 0x0","time":"2022-10-24T16:30:55Z","message":"Serve tunnel error"}
+{"level":"info","ip":"198.41.200.193","connIndex":0,"time":"2022-10-24T16:30:55Z","message":"Retrying connection in up to 1s"}
+{"level":"info","connIndex":1,"time":"2022-10-24T16:30:56Z","message":"Unregistered tunnel connection"}
+{"level":"error","ip":"198.41.192.167","connIndex":1,"error":"Application error 0x0","time":"2022-10-24T16:30:56Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.192.167","connIndex":1,"error":"Application error 0x0","time":"2022-10-24T16:30:56Z","message":"Serve tunnel error"}
+{"level":"info","ip":"198.41.192.167","connIndex":1,"time":"2022-10-24T16:30:56Z","message":"Retrying connection in up to 1s"}
+{"level":"info","connIndex":2,"time":"2022-10-24T16:30:56Z","message":"Unregistered tunnel connection"}
+{"level":"error","ip":"198.41.200.23","connIndex":2,"error":"Application error 0x0","time":"2022-10-24T16:30:56Z","message":"Failed to serve quic connection"}
+{"level":"error","ip":"198.41.200.23","connIndex":2,"error":"Application error 0x0","time":"2022-10-24T16:30:56Z","message":"Serve tunnel error"}
+{"level":"info","ip":"198.41.200.23","connIndex":2,"time":"2022-10-24T16:30:56Z","message":"Retrying connection in up to 1s"}
+{"level":"error","time":"2022-10-24T16:30:56Z","message":"no more connections active and exiting"}
+{"level":"info","time":"2022-10-24T16:30:56Z","message":"Tunnel server stopped"}
+{"level":"error","error":"context canceled","time":"2022-10-24T16:30:56Z","message":"icmp router terminated"}
+{"level":"info","time":"2022-10-24T16:30:56Z","message":"Metrics server stopped"}
