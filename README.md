@@ -29,9 +29,10 @@
 
 Saycheses is a bash based script which is officially made for termux from this tool can hack you victims camera by simple offer page. This tool works on both rooted Android device and Non-rooted Android device.
 
-## AVAILABLE ON :
+## UPDATED FEATURES :
 
-* Termux
+* NGROK LINK GENERATING ISSUE FIX
+* CLOUDFLARED AADED ON THIS TOOL
 
 ### TESTED ON :
 
