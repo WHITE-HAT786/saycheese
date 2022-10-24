@@ -126,7 +126,7 @@ __SELECT OPTION__ :
 
 <br>
 <p align="center">
-<img width="50%" <img src="https://i.ibb.co/w0sqYw7/20210227-233338.png" alt="20210227-233338" border="0">
+<img width="50%" <img src="https://i.ibb.co/BZzcPS9/IMG-20221024-230228.jpg" alt="20210227-233338" border="0">
 <img width="50%" <img src="https://i.ibb.co/W2BJXrS/20210227-232109.png" alt="20210227-232109" border="0">
 
 </p>
