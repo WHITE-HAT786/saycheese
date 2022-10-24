@@ -31,8 +31,11 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 ## UPDATED FEATURES :
 
-* NGROK LINK GENERATING ISSUE FIX
-* CLOUDFLARED AADED ON THIS TOOL
+* NGROK LINK GENERATING ISSUE FIX.
+
+* CLOUDFLARED AADED ON THIS TOOL.
+
+* NEW HTML PAGE IS ADDED.
 
 ### TESTED ON :
 
@@ -60,13 +63,11 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `apt-get upgrade -y`
 
-* `pkg install python -y`
+* `pkg install wget -y`
 
-* `pkg install python2 -y`
+* `pkg install php -y`
 
 * `pkg install git -y`
-
-* `pip install requests`
 
 * `git clone https://github.com/WHITE-HAT786/saycheese.git`
 
@@ -76,7 +77,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * `ls`
 
-* `chmod 777 ngrok`
+* `chmod +x *`
 
 * `./ngrok autotoken`
  YOU CAN CREATE YOUR NGROK ACCOUNT FROM HERE - www.ngrok.com 
