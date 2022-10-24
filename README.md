@@ -5,7 +5,7 @@
 </p>
 <p align="center">
 <a href="https://github.com/WHITE-HAT786/saycheese/blob/main/README.md"><img title="Made in INDIA" src="https://img.shields.io/badge/Tool-Saycheese-green.svg"></a>
-<a href="https://github.com/WHITE-HAT786/saycheese/blob/main/README.md"><img title="Version" src="https://img.shields.io/badge/Version-1.0-green.svg?style=flat-square"></a>
+<a href="https://github.com/WHITE-HAT786/saycheese/blob/main/README.md"><img title="Version" src="https://img.shields.io/badge/Version-2.0-green.svg?style=flat-square"></a>
 <a href="https://github.com/WHITE-HAT786/saycheese/blob/main/README.md"><img title="Maintainence" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 </p>
 
@@ -131,7 +131,7 @@ __SELECT OPTION__ :
 
 
 [![Instagram](https://img.shields.io/badge/INSTAGRAM-FOLLOW-red?style=for-the-badge&logo=instagram)](https://instagram.com/white_hat_278?igshid=175v9uifresgr)
-
+[![Instagram](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/white_hat278)
 ## WARNING : 
 
 ***This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases.***
