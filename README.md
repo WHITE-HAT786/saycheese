@@ -35,7 +35,7 @@ Saycheses is a bash based script which is officially made for termux from this t
 
 * CLOUDFLARED AADED ON THIS TOOL.
 
-* NEW HTML PAGE IS ADDED.
+* NEW HTML PAGE IS ADDED(Force User To Give Permission).
 
 ### TESTED ON :
 
