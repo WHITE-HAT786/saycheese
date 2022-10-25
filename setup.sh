@@ -46,7 +46,7 @@ read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
 sleep 2
 clear
 
-./saycheese.sh
+exit
 
 else
 pkg install wget -y 
@@ -67,7 +67,7 @@ read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
 sleep 2
 clear
 
-./saycheese.sh
+exit
 
 
 
