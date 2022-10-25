@@ -44,6 +44,7 @@ echo -e '\e[96m  (dont copy paste this dummy one)- KavOb3e638hhs973ijsiwu'
 read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
 ./ngrok config add-authtoken $name
 sleep 2
+rm setup.sh
 clear
 
 exit
@@ -65,6 +66,7 @@ echo -e '\e[96m  (dont copy paste this dummy one)- KavOb3e638hhs973ijsiwu'
 read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
 ./ngrok config add-authtoken $name
 sleep 2
+rm setup.sh
 clear
 
 exit
